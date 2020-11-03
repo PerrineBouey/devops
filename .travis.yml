@@ -5,9 +5,9 @@ script:
   - docker build -t perrinebouey/correction-tp1-master_database database
   - docker build -t perrinebouey/correction-tp1-master_backend simple-api
   - docker build -t perrinebouey/correction-tp1-master_httpd httpd
-  - docker push perrinebouey/correction-tp1-master_database
-  - docker push perrinebouey/correction-tp1-master_backend
-  - docker push perrinebouey/correction-tp1-master_httpd
+  - docker push perrinebouey/devops:correction-tp1-master_database
+  - docker push perrinebouey/devops:correction-tp1-master_backend
+  - docker push perrinebouey/devops:correction-tp1-master_httpd
 
 cache:
   directories:
