@@ -1,6 +1,7 @@
 language: java
 script:
   - mvn clean verify --file ./simple-api/pom.xml
+  - mvn clean verify --file ./simple-api/pom.xml org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=devops-2020
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
   - docker build -t perrinebouey/devops:database database
   - docker build -t perrinebouey/devops:backend simple-api
@@ -12,3 +13,8 @@ script:
 cache:
   directories:
     - $HOME/.m2
+
+addons:
+  sonarcloud:
+    organization: "perrinebouey"
+    token: "$SONARCLOUD_TOKEN"
