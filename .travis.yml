@@ -1,3 +1,7 @@
 language: java
 script:
   - mvn clean verify --file ./simple-api/pom.xml
+  - docker login $DOCKER_LOGIN $DOCKER_PASSWORD
+  - docker push perrinebouey/correction-tp1-master_database
+  - docker push perrinebouey/correction-tp1-master_backend
+  - docker push perrinebouey/correction-tp1-master_httpd
