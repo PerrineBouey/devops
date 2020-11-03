@@ -2,12 +2,12 @@ language: java
 script:
   - mvn clean verify --file ./simple-api/pom.xml
   - docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
-  - docker build -t perrinebouey/devops:correction-tp1-master_database database
-  - docker build -t perrinebouey/devops:correction-tp1-master_backend simple-api
-  - docker build -t perrinebouey/devops:correction-tp1-master_httpd httpd
-  - docker push perrinebouey/devops:correction-tp1-master_database
-  - docker push perrinebouey/devops:correction-tp1-master_backend
-  - docker push perrinebouey/devops:correction-tp1-master_httpd
+  - docker build -t perrinebouey/devops:database database
+  - docker build -t perrinebouey/devops:backend simple-api
+  - docker build -t perrinebouey/devops:httpd httpd
+  - docker push perrinebouey/devops:database
+  - docker push perrinebouey/devops:backend
+  - docker push perrinebouey/devops:httpd
 
 cache:
   directories:
