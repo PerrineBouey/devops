@@ -3,9 +3,9 @@
   become: yes
 
   roles:
-    - docker
-    - createNetwork
+    #- docker
+    #- createNetwork
+    - launchProxy
     - launchDatabase
     - launchApp
     - launchFront
-    - launchProxy
