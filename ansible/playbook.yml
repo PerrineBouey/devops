@@ -3,8 +3,8 @@
   become: yes
 
   roles:
-    - roles/docker
-    - roles/createNetwork
-    - roles/launchDatabase
-    - roles/launchApp
-    - roles/launchProxy
+    - docker
+    - createNetwork
+    - launchDatabase
+    - launchApp
+    - launchProxy

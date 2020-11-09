@@ -2,5 +2,7 @@
   docker_container:
     name: httpd
     image: perrinebouey/devops:httpd
+    ports:
+      - 80:80
     networks:
       - name: app-network
