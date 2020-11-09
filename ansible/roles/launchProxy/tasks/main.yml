@@ -4,5 +4,6 @@
     image: perrinebouey/devops:httpd
     ports:
       - 80:80
+    pull: true
     networks:
       - name: app-network

@@ -7,4 +7,5 @@
     - createNetwork
     - launchDatabase
     - launchApp
+    - launchFront
     - launchProxy
