@@ -1,0 +1,9 @@
+- name: Run Backend
+  docker_container:
+    name: backend
+    image: perrinebouey/devops:backend
+    networks:
+      - name: app-network
+    env:
+      username: usr
+      password: pwd

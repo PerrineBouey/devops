@@ -1,0 +1,6 @@
+- name: Run HTTPD
+  docker_container:
+    name: httpd
+    image: perrinebouey/devops:httpd
+    networks:
+      - name: app-network
