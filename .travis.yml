@@ -15,9 +15,11 @@ jobs:
         - docker build -t perrinebouey/devops:database database
         - docker build -t perrinebouey/devops:backend simple-api
         - docker build -t perrinebouey/devops:httpd httpd
+        - docker build -t perrinebouey/devops:front front
         - docker push perrinebouey/devops:database
         - docker push perrinebouey/devops:backend
         - docker push perrinebouey/devops:httpd
+        - docker push perrinebouey/devops:front
           
 cache:
   directories:

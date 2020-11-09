@@ -1,0 +1,8 @@
+- name: Run Front
+  docker_container:
+    name: front
+    image: perrinebouey/devops:front
+    ports:
+      - 80:80
+    networks:
+      - name: app-network
